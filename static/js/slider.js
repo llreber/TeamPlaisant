@@ -7,9 +7,9 @@ function functor(v) {
 function sliderFactory(d) {
   let width = 600,
   height = 55,
-  range=[2007,2016],
+  range=[1946,2016],
   step=1,
-  ticks=1,
+  ticks=10,
   value=0,
   margin = {top: 20, right: 20, bottom: 0, left: 20},
   scale,
@@ -20,7 +20,7 @@ function sliderFactory(d) {
   svg,
   sliderScale
 
-  var parseNum = d3.format(".2g");
+  var parseNum = d3.format(".0f");
 
   function drawSlider(p) {
     //console.log("drawSlider")
@@ -45,6 +45,9 @@ function sliderFactory(d) {
               dragSlider(this)
               dragHandler(drawSlider); 
               value=rounded;
+            })
+            .on("end", function(rounded){
+              buildMap(value);
             }))
         .attr("transform", sliderTranslation(orient));
 

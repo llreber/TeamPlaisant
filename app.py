@@ -50,7 +50,7 @@ def map(year):
         aid.fiscal_year        
     ]
 
-    results = db.session.query(*sel).filter(aid.fiscal_year == year).filter(aid.transaction_type_name == "Disbursements").group_by(aid.country_name, aid.fiscal_year, aid.transaction_type_name)
+    results = db.session.query(*sel).filter(aid.fiscal_year == year).filter(aid.transaction_type_name == "Obligations").group_by(aid.country_name, aid.fiscal_year, aid.transaction_type_name)
 
     # Create a dictionary entry for each row of information
 
