@@ -46,7 +46,7 @@ function sliderFactory(d) {
               dragHandler(drawSlider); 
               value=rounded;
             })
-            .on("end", function(rounded){
+            .on("end", function(){
               buildMap(value);
             }))
         .attr("transform", sliderTranslation(orient));

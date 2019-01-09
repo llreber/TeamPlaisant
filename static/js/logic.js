@@ -41,9 +41,8 @@ function getValue(d) {
 
 // Import Data
 function buildMap(year) {
-  var dollarFmt = d3.format(",.0f");
   //console.log(year);
-  circleLayer.clearLayers();
+  //circleLayer.clearLayers();
   //Use `d3.json` to fetch the sample data for the map
   var url = `/map/${year}`;
   console.log(url);
@@ -78,10 +77,3 @@ function init() {
 // Initialize the map
 init();
 
-//event listener for slider movement
-/* var moveHandle = d3.drag();
-moveHandle.on("end", function(slider){
-  console.log(slider.value());
-  var newYear = slider.value();
-  buildMap(newYear);
-});    */
