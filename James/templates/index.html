@@ -1,6 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    
+    .d3-tip {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 1.5em;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+    
+#circle_label1{
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background: red;
+    }
+
+    #circle_label2 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:green;
+    }
+
+    #circle_label3 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:blue;
+    }
+
+    #circle_label4 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:yellow;
+    }
+
+    #circle_label5 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:cyan;
+    }
+
+
+    #circle_label6 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:black;
+    }
+
+
+
+    </style>
     <link rel="icon" href="data:,">
   <link rel="shortcut icon" href="">
   <meta charset="UTF-8">
@@ -19,62 +91,44 @@
     crossorigin="anonymous">
   <!-- <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../d3Style.css"> -->
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+  crossorigin="anonymous">
+  <!-- <link rel="stylesheet"  type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="d3Style.css"> -->
+ 
 
 </head>
 
 <body>
   <div class="container">
+
+      <div id="button1"></div>
     <div class="row">
-      <div class="col-xs-12 col-md-12">
+      <!-- <div class="col-xs-12 col-md-12">
         <center><h1>A data tool for analysing health risks facing particular demographics</h1></center>
         <center><i>---Raw data from U.S. Census Bureau and the Behavioral Risk Factor Surveillance</i></center>
-      </div>
+      </div> -->
     </div>
-    <br><br>
-    <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div id="scatter_plotly">
-          <!-- We append our chart here. -->
-        </div>
-      </div>
+  
 
-      <div class="col-xs-12  col-md-3">
-        <br><br><br><br><br>
-        <div id="selected_country_table">
-
-          <!-- We append our chart here. -->
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-
+    <div id="button2"></div>
     <div class="row">
         <div class="col-xs-12  col-md-9">
-          <div id="scatter_d3">
+          <div id="scatter_2">
             <!-- We append our chart here. -->
           </div>
         </div>
   
-        <div class="col-xs-12  col-md-3">
-          <br><br><br><br><br>
-          <div id="selected_country_table">
-  
-            <!-- We append our chart here. -->
-          </div>
+        <div class="col-xs-12  col-md-3">      
+           <br><br>
+           <div id="selected_country_table2"></div>
         </div>
   
       </div>
 
 
-   <h3>preliminary observations:</h3> 
-  <ul>
- <li>Obviously, the higer income, the higher HealthCare, the lower obesity and lower smokers</li>
- <li>Roughly, the higher poverty rate, the higher smokes. An obvious exception to this rule is UT state. </li>
- <li>Roughly, the higher median age, the higher rate of Health Care and lower obesity rate.</li>
- <li>...</li>
- </ul>
-
+   
   </div>
 
   <!-- Footer -->
@@ -83,7 +137,7 @@
   </div> -->
   
 
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
   <!-- <script type="text/javascript" src="../js/app1.js"></script> -->
   <script src="{{ url_for('static', filename='js/app1.js') }}"></script>
 

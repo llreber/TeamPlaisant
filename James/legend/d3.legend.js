@@ -41,10 +41,10 @@
         
         // Reposition and resize the box
         // var lbbox = li[0][0].getBBox()  
-        lb.attr("x",(lbbox.x-legendPadding))
-            .attr("y",(lbbox.y-legendPadding))
-            .attr("height",(lbbox.height+2*legendPadding))
-            .attr("width",(lbbox.width+2*legendPadding))
+        // lb.attr("x",(lbbox.x-legendPadding))
+        //     .attr("y",(lbbox.y-legendPadding))
+        //     .attr("height",(lbbox.height+2*legendPadding))
+        //     .attr("width",(lbbox.width+2*legendPadding))
       })
       return g
     }
