@@ -30,12 +30,12 @@ var countries
   var chartGroup2 = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
-  svg1=d3.select("#scatter_1")
-  .append("svg")
-  .attr("width", svgWidth)
-  .attr("height", svgHeight)
+  // svg1=d3.select("#scatter_1")
+  // .append("svg")
+  // .attr("width", svgWidth)
+  // .attr("height", svgHeight)
 
-  var chartGroup1 = d3.select("MeiYou")
+  // var chartGroup1 = d3.select("MeiYou")
   function rainbow(n) {
     //from value to color where n is from 0 to 255
       n = n * 240 / 255;
@@ -99,6 +99,12 @@ d3.json(`/country/${country}`).then(function(AidData) {
       data.fiscal_year= parseTime(data.fiscal_year);
     });
 
+
+    // chartGroup2=d3.select("#svg")
+    // var chartGroup2 = svg.append("g")
+    // .attr("transform", `translate(${margin.left}, ${margin.top})`)
+
+
   var circlesGroup=  chartGroup2.selectAll("g.dot")
   .data(AidData)
   .enter().append('g');
@@ -155,7 +161,6 @@ var toolTip = d3.tip()
     toolTip.show(data,this);
   })
   
-
     // onmouseout event
     .on("mouseout", function(data, index) {
       toolTip.hide(data,this);
@@ -216,6 +221,7 @@ function BackToM(){
   // if (!svg.empty()){svg.remove()}  
   d3.select("#scatter_2").html("")
   document.getElementById("scatter_2").appendChild(svg_copy);
+
 }
 
 
@@ -392,6 +398,29 @@ function onchange2() {
       .attr("data-legend",function(d) { return d.country_name})
       
     
+      var labelsGroup_x = chartGroup2.append("g")
+      .attr("transform", `translate(${chartWidth/2}, ${chartHeight})`);
+      // Create group template for  3 y- axis labels
+    var labelsGroup_y = chartGroup2.append("g")
+    //.attr("transform", `translate(${chartWidth/2 +margin.left}, ${chartHeight+margin.top-20})`);
+    .attr("x", -chartHeight/2)
+         .attr("y", 0)
+         .attr("dy", "0.375em")
+         .attr("transform", "rotate(-90)")
+    
+      labelsGroup_x.append("text")
+      .attr("x", 0)
+      .attr("y", 20+20)
+      .attr("text-anchor", "middle")
+      .text("Year");
+    
+      labelsGroup_y.append("text")
+      .attr("x", -chartHeight/2)
+      .attr("y", -80)
+       .attr("text-anchor", "middle")
+      .text("US-Aid Amount($)");
+    
+
       const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD',
