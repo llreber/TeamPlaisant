@@ -12,38 +12,37 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
   accessToken: API_KEY
 }).addTo(myMap);
 
+var circleLayer = new L.LayerGroup();
+
 function markerSize(amount) {
   //console.log(amount/1000);
-  return amount/1000;
+  if (amount < 100000){
+    return 20;
+  }else{
+  return amount/5000;
+  }
 }
 const slider = sliderFactory()
 let slideholder = d3.select('#slider').call(slider
   .scale(true)
   .value(2016)
 	.step(1)
-	.dragHandler(function(d) {getValue(d);})
-	);
-  function getValue(d) {
-    var parseNum = d3.format(".0f");
-    //console.log (d.value);
-    d3.select("#slideValue").text("Year "+parseNum(d.value()));
-  }
-
-function markerColor(type) {
-  if (type == "Disbursements") {
-    color = "red"
-  }else if(type == "Obligations") {
-    color = "green"
-  } else {
-    color = "white"
-  };
-  return color;
+	.dragHandler(function(d) {
+    getValue(d);
+    //buildMap(d.value());
+  })
+  );
+  
+function getValue(d) {
+  var parseNum = d3.format(".0f");
+  //console.log (d.value);
+  d3.select("#slideValue").text("Year "+parseNum(d.value()));
 }
 
-
-// Import Data
+// plot the data on the map
 function buildMap(year) {
-  console.log(year);
+  //console.log(year);
+  circleLayer.clearLayers();
   //Use `d3.json` to fetch the sample data for the map
   var url = `/map/${year}`;
   console.log(url);
@@ -51,18 +50,21 @@ function buildMap(year) {
     //console.log(data);
     data.forEach((country) => {
       if (country.latitude !== null){
-        console.log(country);
+        //console.log(country);
           var location = [country.latitude, country.longitude];
-          //console.log(location);          
-          L.circle(location, {
+          var aidAmount = Math.round(country.amount/1000000);
+          //console.log(location);       
+          var circle = L.circle(location, {
             fillOpacity: 0.75,
             fillColor: "red",
             color: "red",          
             radius: markerSize(country.amount)
-          }).bindPopup("<h1>" + country.country + "</h1> <hr> <h3>Aid received: " + country.amount + "</h3>").addTo(myMap);
+          }).bindPopup("<h1>" + country.country + "</h1> <hr> <h3>"+ year + " Aid received: $" + aidAmount + " million</h3>").addTo(myMap);
+          circleLayer.addLayer(circle);
         };      
       });
-    });     
+    }); 
+    circleLayer.addTo(myMap);    
 };
 
 function init() {
@@ -72,16 +74,6 @@ function init() {
     buildMap(year);
 }
 
-function optionChanged(newYear) {
-  // Fetch new data each time a new year is selected
-  //var newYear = slider.value();
-  console.log(newYear);
-  buildMap(newYear);
-}
 // Initialize the map
 init();
 
-/* slideholder.on("onchange", function(){
-  var newYear = slider.value();
-  buildMap(newYear);
-});  */
