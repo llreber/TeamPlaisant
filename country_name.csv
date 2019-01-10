@@ -1,0 +1,254 @@
+,country,year_count
+0,Afghanistan,19690
+1,Albania,4330
+2,Algeria,897
+3,Angola,5676
+4,Anguilla,5
+5,Antigua and Barbuda,149
+6,Argentina,1207
+7,Armenia,7125
+8,Aruba,22
+9,Asia Region,5053
+10,"Asia, Middle East and North Africa Region",2499
+11,Australia,106
+12,Austria,237
+13,Azerbaijan,5003
+14,Bahamas,346
+15,Bahrain,468
+16,Bangladesh,9447
+17,Barbados,409
+18,Belarus,2028
+19,Belgium,176
+20,Belize,852
+21,Benin,6954
+22,"Berlin, West",26
+23,Bermuda,8
+24,Bhutan,147
+25,Bolivia,9302
+26,Bosnia and Herzegovina,6432
+27,Botswana,2142
+28,Brazil,4371
+29,British Indian Ocean Territory,4
+30,British Virgin Islands,3
+31,Brunei,26
+32,Bulgaria,2421
+33,Burkina Faso,4623
+34,Burma (Myanmar),3420
+35,Burundi,4902
+36,Cabo Verde,1467
+37,Cambodia,8331
+38,Cameroon,2809
+39,Canada,668
+40,Caribbean Region,3556
+41,Cayman Islands,12
+42,Central African Republic,1588
+43,Central America Region,2832
+44,Central America and Caribbean Region,447
+45,Central and Eastern Europe Region,1249
+46,Chad,3250
+47,Chile,1120
+48,China (P.R. Hong Kong),143
+49,China (P.R.C.),4982
+50,China (Tibet),189
+51,"China, Republic of (Taiwan)",484
+52,Colombia,7950
+53,Comoros,340
+54,Congo (Brazzaville),1209
+55,Congo (Kinshasa),12357
+56,Cook Islands,3
+57,Costa Rica,1967
+58,Cote d'Ivoire,2781
+59,Croatia,2008
+60,Cuba,1503
+61,Curacao,12
+62,Cyprus,606
+63,Czechia,342
+64,Czechoslovakia (former),31
+65,Denmark,78
+66,Djibouti,2070
+67,Dominica,151
+68,Dominican Republic,7427
+69,East Asia and Oceania Region,564
+70,East and South Africa Region,6
+71,Eastern Africa Region,4353
+72,Eastern Asia Region,2735
+73,Eastern Europe Region,7040
+74,Eastern and Central Africa Region,5
+75,Ecuador,4787
+76,Egypt,10051
+77,El Salvador,8004
+78,Equatorial Guinea,212
+79,Eritrea,1822
+80,Estonia,462
+81,Eswatini,1836
+82,Ethiopia,24226
+83,Eurasia Region,6589
+84,Europe Region,1550
+85,Europe and Eurasia Region,1439
+86,Fiji,441
+87,Finland,62
+88,France,184
+89,French Guiana,4
+90,French Polynesia,1
+91,Gabon,828
+92,Gambia,1187
+93,Georgia,9582
+94,Germany,124
+95,Germany (former East),1
+96,Ghana,11963
+97,Greece,615
+98,Grenada,185
+99,Guatemala,12921
+100,Guinea,6293
+101,Guinea-Bissau,653
+102,Guyana,2873
+103,Haiti,16662
+104,Honduras,9504
+105,Hungary,1096
+106,Iceland,79
+107,India,11987
+108,Indonesia,14591
+109,Iran,386
+110,Iraq,21201
+111,Ireland,80
+112,Israel,2248
+113,Italy,195
+114,Jamaica,5748
+115,Japan,432
+116,Jordan,9397
+117,Kazakhstan,6799
+118,Kenya,18751
+119,Kiribati,40
+120,Korea Republic,543
+121,"Korea, Democratic Republic",591
+122,Kosovo,2966
+123,Kuwait,214
+124,Kyrgyzstan,6840
+125,Laos,1431
+126,Latin America Region,340
+127,Latin America and Caribbean Region,7359
+128,Latvia,415
+129,Lebanon,4406
+130,Lesotho,2501
+131,Liberia,11508
+132,Libya,1065
+133,Lithuania,410
+134,Luxembourg,4
+135,Macau,14
+136,Macedonia,4588
+137,Madagascar,7343
+138,Malawi,10846
+139,Malaysia,1242
+140,Maldives,225
+141,Mali,11896
+142,Malta,202
+143,Marshall Islands,889
+144,Martinique,19
+145,Mauritania,2573
+146,Mauritius,417
+147,Mexico,8504
+148,Micronesia (Federated States),1231
+149,Middle East Region,556
+150,Middle East and North Africa Region,2325
+151,Moldova,4691
+152,Mongolia,2939
+153,Montenegro,1826
+154,Montserrat,4
+155,Morocco,9303
+156,Mozambique,13188
+157,Namibia,4108
+158,Nauru,8
+159,Nepal,9787
+160,Netherlands,160
+161,Netherlands Antilles (former),23
+162,New Caledonia,8
+163,New Zealand,77
+164,Nicaragua,9097
+165,Niger,4218
+166,Nigeria,13405
+167,North Africa Region,107
+168,North America Region,40
+169,North and Central America Region,64
+170,Norway,83
+171,Oceania Region,412
+172,Oman,561
+173,Pacific Island Trust Territory,14
+174,Pakistan,13025
+175,Palau,249
+176,Panama,3095
+177,Papua New Guinea,609
+178,Paraguay,3674
+179,Peru,10391
+180,Philippines,10690
+181,Poland,807
+182,Portugal,374
+183,Qatar,71
+184,Romania,2759
+185,Russia,9079
+186,Rwanda,9961
+187,Samoa,277
+188,Sao Tome and Principe,375
+189,Saudi Arabia,213
+190,Senegal,10518
+191,Serbia,5155
+192,Serbia and Montenegro (former),799
+193,Seychelles,362
+194,Sierra Leone,4483
+195,Singapore,249
+196,Slovak Republic,552
+197,Slovenia,222
+198,Solomon Islands,156
+199,Somalia,4934
+200,South Africa,10628
+201,South America Region,703
+202,South East Asia Region,431
+203,South Sudan,3334
+204,South and Central Asia Region,257
+205,Southern Africa Region,3980
+206,Southern Asia Region,594
+207,Soviet Union (former),23
+208,Spain,321
+209,Sri Lanka,5771
+210,St. Kitts and Nevis,123
+211,St. Lucia,116
+212,St. Vincent and Grenadines,115
+213,Sub-Saharan Africa Region,14023
+214,Sudan,1625
+215,Sudan (former),10362
+216,Suriname,390
+217,Sweden,52
+218,Switzerland,30
+219,Syria,2234
+220,Tajikistan,5722
+221,Tanzania,13580
+222,Thailand,4145
+223,Timor-Leste,3393
+224,Togo,1139
+225,Tonga,269
+226,Trinidad and Tobago,327
+227,Tunisia,1557
+228,Turkey,2525
+229,Turkmenistan,2860
+230,Turks and Caicos Islands,19
+231,Tuvalu,19
+232,Uganda,16937
+233,Ukraine,11104
+234,United Arab Emirates,243
+235,United Kingdom,193
+236,Uruguay,526
+237,Uzbekistan,4216
+238,Vanuatu,572
+239,Venezuela,1757
+240,Vietnam,5929
+241,Vietnam (former South),192
+242,West Africa Region,7048
+243,West Bank/Gaza,6860
+244,Western (Spanish) Sahara,3
+245,Western Europe Region,41
+246,Western Hemisphere Region,252
+247,World,97137
+248,Yemen,4370
+249,Yemen (former P.D.R.),9
+250,Yugoslavia (former),44
+251,Zambia,10551
+252,Zimbabwe,7653

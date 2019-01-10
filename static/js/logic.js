@@ -39,10 +39,10 @@ function getValue(d) {
   d3.select("#slideValue").text("Year "+parseNum(d.value()));
 }
 
-// Import Data
+// plot the data on the map
 function buildMap(year) {
   //console.log(year);
-  //circleLayer.clearLayers();
+  circleLayer.clearLayers();
   //Use `d3.json` to fetch the sample data for the map
   var url = `/map/${year}`;
   console.log(url);
