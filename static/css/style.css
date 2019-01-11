@@ -10,3 +10,64 @@ body,
 html {
   height: 100%;
 }
+
+.d3-tip {
+  padding: 6px;
+  font-size: 12px;
+  line-height: 1;
+  line-height: 1.5em;
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+    
+#circle_label1{
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background: red;
+    }
+    #circle_label2 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:green;
+    }
+    #circle_label3 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:blue;
+    }
+    #circle_label4 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:yellow;
+    }
+    #circle_label5 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:cyan;
+    }
+    #circle_label6 {
+      width: 20px;
+      height: 20px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      background:black;
+    }
