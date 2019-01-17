@@ -87,28 +87,25 @@ def map(year):
         
     return jsonify(map_data)
 
+
+data_bar_df=pd.read_csv("./us_foreign_aid_small.csv")
+data123=data_bar_df[["year","category","amount"]].groupby(["year","category"]).sum().reset_index()
+
 @app.route("/bar/<year>")
 def bar(year):
-    #return the information by aid type for the year selected
-    sel = [
-        aid.assistance_category_name,
-        aid.transaction_type_name,
-        db.func.sum(aid.constant_amount),
-        aid.fiscal_year        
-    ]
-    results = db.session.query(*sel).filter(aid.fiscal_year == year).filter(aid.transaction_type_name == "Obligations").group_by( aid.fiscal_year, aid.assistance_category_name)
+   
+    data0=data123[data123["year"]==year] 
+    data0['amount']=data0['amount'].astype(str,inplace=True)
 
-    # Create a dictionary entry for each row of information
+    print("data0=",data0)
 
-    bar_data = []
-    for result in results:
-        bar_dict = {}
-        bar_dict["assistance type"] = result[0]
-        bar_dict["transaction type"] = result[1]
-        bar_dict["amount"] = result[2]
-        bar_dict["year"] = result[3]
-        bar_data.append(bar_dict)
-    
+    bar_data=[]
+    for i in range(len(data0)):
+        ss=data0.iloc[i]
+        bar_data.append({"category":ss["category"],"amount":ss["amount"]  })
+
+    print("bar_data=",bar_data)
+    print(year)
     return jsonify(bar_data)
 
 @app.route("/names")
