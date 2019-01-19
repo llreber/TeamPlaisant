@@ -16,7 +16,7 @@ var svgHeight = 500;
 var chartMargin = {
   top: 30,
   right: 30,
-  bottom: 30,
+  bottom: 100,
   left: 150
 };
 
@@ -151,4 +151,26 @@ d3.json(`/bar/${year}`).then(function(aidData) {
 
   
   
+  var labels_y = chartGroup.append("g")
+  //.attr("transform", `translate(${chartWidth/2 +margin.left}, ${chartHeight+margin.top-20})`);
+  .attr("x", -chartHeight/2)
+       .attr("y", 0)
+       .attr("dy", "0.375em")
+       .attr("transform", "rotate(-90)")
+
+  labels_y.append("text")
+  .attr("x", -chartHeight/2)
+  .attr("y", -100)
+  .attr("text-anchor", "middle")
+  .text("US-Aid Amount total($)");
+
+  var labels_x = chartGroup2.append("g")
+  .attr("transform", `translate(${chartWidth/2}, ${chartHeight})`);
+
+  labels_x.append("text")
+  .attr("x", 0)
+  .attr("y", 20+20)
+  .attr("text-anchor", "middle")
+  .text("Category");
+
  })};
