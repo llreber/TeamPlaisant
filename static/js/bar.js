@@ -1,5 +1,9 @@
 // Define SVG area dimensions
 console.log("here")
+
+d3.select(".bar").append("h3")
+.text('Total amount each year per category')
+
 bubble_line1=d3.select(".bar")
 .append('div')
 .attr('id','button_bar')

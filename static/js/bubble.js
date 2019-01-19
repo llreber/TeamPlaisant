@@ -1,5 +1,8 @@
 
-
+// d3.select("#bubble").append("br")
+// d3.select("#bubble").append("br")
+d3.select("#bubble").append("h3")
+.text('Countrywise Aid over the years:')
   bubble_line1=d3.select("#bubble")
    .append('div')
    .attr('id','button2')
@@ -153,7 +156,7 @@ var labelsGroup_x = chartGroup2.append("g")
   // Create group template for  3 y- axis labels
 var labelsGroup_y = chartGroup2.append("g")
 //.attr("transform", `translate(${chartWidth/2 +margin.left}, ${chartHeight+margin.top-20})`);
-.attr("x", -chartHeight/2)
+.attr("x", -chartHeight/2+100)
      .attr("y", 0)
      .attr("dy", "0.375em")
      .attr("transform", "rotate(-90)")
@@ -165,7 +168,7 @@ var labelsGroup_y = chartGroup2.append("g")
   .text("Year");
 
   labelsGroup_y.append("text")
-  .attr("x", -chartHeight/2)
+  .attr("x", -chartHeight/2+100)
   .attr("y", -70)
    .attr("text-anchor", "middle")
   .text("US-Aid Amount($)");
