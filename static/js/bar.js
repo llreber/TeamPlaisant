@@ -17,7 +17,7 @@ var chartMargin = {
   top: 30,
   right: 30,
   bottom: 30,
-  left: 30
+  left: 150
 };
 
 // Define dimensions of the chart area
