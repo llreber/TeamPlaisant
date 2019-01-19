@@ -1,4 +1,5 @@
 
+
   bubble_line1=d3.select("#bubble")
    .append('div')
    .attr('id','button2')
@@ -8,7 +9,7 @@ bubble_line2= d3.select("#bubble")
     .attr("class","row")
 
   bubble_line2.append("div")
-   .attr("class","col-xs-12  col-md-7")  
+   .attr("class","col-xs-12  col-md-9")  
    .append("div")
    .attr('id',"scatter_2")
 
@@ -31,6 +32,9 @@ var max_val=1000000000
 
   var svgHeight = window.innerHeight*7/10;
   var svgWidth = window.innerWidth*8/10;
+
+  // var svgWidth = 900;
+  // var svgHeight = 1000;
 
   var margin = {
     top: 20+30+30,

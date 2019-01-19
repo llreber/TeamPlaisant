@@ -1,5 +1,6 @@
 // Define SVG area dimensions
-console.log("here")
+
+
 bubble_line1=d3.select(".bar")
 .append('div')
 .attr('id','button_bar')
@@ -7,10 +8,18 @@ bubble_line1=d3.select(".bar")
 bubble_line2= d3.select(".bar")
  .append('div')
  .attr('id',"bar_plot")
+//  .attr("class","row")
+
+// bubble_line2.append("div")
+// .attr("class","col-xs-12  col-md-12")  
+// .append("div")
 
 
+
+// var svgWidth = window.innerHeight*7/10;
+// var svgHeight = window.innerWidth*8/10;;
 var svgWidth = 800;
-var svgHeight = 500;
+var svgHeight = 1000;
 
 // Define the chart's margins as an object
 var chartMargin = {
@@ -19,6 +28,13 @@ var chartMargin = {
   bottom: 30,
   left: 30
 };
+
+// var chartMargin = {
+//   top: 20+30+30,
+//   right: 120+30+30+100,
+//   bottom: 80,
+//   left: 80+30+30
+// }
 
 // Define dimensions of the chart area
 var chartWidth = svgWidth - chartMargin.left - chartMargin.right;
@@ -31,8 +47,8 @@ d3.select('#button_bar').append("button").attr("type","button")
 
 var svg_bar = d3.select("#bar_plot")
   .append("svg")
-  .attr("height", svgHeight)
-  .attr("width", svgWidth);
+  .attr("height", chartHeight)
+  .attr("width", chartWidth);
 
 // Append a group to the SVG area and shift ('translate') it to the right and to the bottom
 var chartGroup = svg_bar.append("g")
