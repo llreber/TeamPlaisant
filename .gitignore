@@ -104,3 +104,4 @@ venv.bak/
 .mypy_cache/
 config.js
 aid_data.sqlite
+app-old.py
